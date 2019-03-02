@@ -12,6 +12,13 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 
+/**
+ * Callback for when the user swipes left
+ *
+ * @param context - for resolving resources
+ * @param iconRes - the @DrawableRes for the icon to display
+ * @param backgroundColorRes the @ColorRes for the background
+ */
 abstract class SwipeToLeftCallback(context: Context, @DrawableRes private val iconRes: Int, @ColorRes private val backgroundColorRes: Int) : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
 
     private var icon = ContextCompat.getDrawable(context, iconRes)
