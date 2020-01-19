@@ -35,8 +35,8 @@ See sample application
             // react to swipe
         }
     }
-    val swipeToLeftItemTouchHelper = ItemTouchHelper(recyclerView)
-    swipeToLeftItemTouchHelper.attachToRecyclerView(list)
+    val swipeToLeftItemTouchHelper = ItemTouchHelper(swipeToLeftCallback)
+    swipeToLeftItemTouchHelper.attachToRecyclerView(recyclerView)
     
     val swipeToRightCallback = object : SwipeToRightCallback(this, R.drawable.drawable_icon, R.color.background_color) {
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
